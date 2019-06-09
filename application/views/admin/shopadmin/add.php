@@ -3,7 +3,7 @@
 	<!-- Table -->
 	<div class="panel panel-flat">
 		<div class="panel-heading">
-			<h5 class="panel-title"> Admin </h5>
+			<h5 class="panel-title"> Admin </h5> <?php print_r($pagecontent); ?>
 			<div class="heading-elements">
 				<ul class="icons-list">
             		<li><a data-action="collapse"></a></li>
@@ -85,7 +85,6 @@
 									<span class="input-group-addon bg-primary"><i class="icon-folder-upload2"></i></span>
 									<select class="form-control" id="roles" name="roles">
 		                                <option value="20">Sub Admin</option> <?php ?>
-		                               <?php if($pagecontent['roles']== 10){ echo '<option value="10">Super Admin</option>'; }?>
 		                            </select>
 								</div>
 							</div>
@@ -101,8 +100,8 @@
 									<span class="input-group-addon bg-primary"><i class="icon-folder-upload2"></i></span>
 									<select class="form-control" id="status" name="status">
 		                                <option value=""> -- Select -- </option>
-		                                <option value="1">Active</option>
-		                                <option value="0">Inactive</option>
+		                                <option value="1" <?php if(set_value('status') == 1){ echo "selected"; } ?> >Active</option>
+		                                <option value="0" <?php if(set_value('status') == 0){ echo "selected"; } ?>>Inactive</option>
 		                            </select>
 								</div>
 							</div>

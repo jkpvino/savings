@@ -77,8 +77,7 @@ class Admin extends CI_Controller {
         }
     }
 
-
-    public function dashboard(){
+    public function pageContent(){
         if(isAdminLogged()){
             $session_data = $this->session->userdata('adminlogged');        
             $_method = $this->router->fetch_method();   
@@ -87,11 +86,21 @@ class Admin extends CI_Controller {
                 'logid' => $session_data['id'],
                 'roles' => $session_data['roles'],
             );
+        }else{
+            $pagecontent = '';
+        }
+        return $pagecontent;
+    }
+
+    public function dashboard(){
+        if(isAdminLogged()){
+            $session_data = $this->session->userdata('adminlogged');        
+            $_method = $this->router->fetch_method();   
             $data = array(
                 'title' => 'Dashboard',
                 'subtitle' => '',
                 'body_content' => 'dashboard.php', 
-                'pagecontent' => $pagecontent,
+                'pagecontent' => $this->pageContent(),
                 'method' => $_method,
             );
             $this->load->view('admin/index',$data);
@@ -113,12 +122,7 @@ class Admin extends CI_Controller {
     public function addadmin(){
         if(isAdminLogged()){
             $session_data = $this->session->userdata('adminlogged');        
-            $_method = $this->router->fetch_method();   
-            $pagecontent = array(
-                'username' => $session_data['username'], 
-                'logid' => $session_data['id'],
-                'roles' => $session_data['roles'],
-            );                       
+            $_method = $this->router->fetch_method();              
             $this->form_validation->set_rules('fullname', 'Name', 'trim|required');
             $this->form_validation->set_rules('username', 'Username', 'trim|required|callback_isAdminExists');
             $this->form_validation->set_rules('password', 'Password', 'trim|required|md5');
@@ -132,7 +136,7 @@ class Admin extends CI_Controller {
                     'password' => trim($this->input->post('password')), 
                     'status' => trim($this->input->post('status'))
                 );
-                $results = $this->admin_model->saveAdmin($records,$permissions);
+                $results = $this->admin_model->saveAdmin($recordsy);
                 $message = 'New Admin Account Created Successfully';
                 $this->session->set_flashdata('flash_message',$message); 
                 redirect('admin/manageadmin', 'refresh');
@@ -141,7 +145,7 @@ class Admin extends CI_Controller {
                     'title' => 'Admin',
                     'subtitle' => '',
                     'body_content' => 'shopadmin/add.php', 
-                    'pagecontent' => $pagecontent,
+                    'pagecontent' => $this->pageContent(),
                     'method' => $_method,
                 );
                 $this->load->view('admin/index',$data);
@@ -156,17 +160,12 @@ class Admin extends CI_Controller {
     public function manageadmin(){
         if(isAdminLogged()){
             $session_data = $this->session->userdata('adminlogged');        
-            $_method = $this->router->fetch_method();   
-            $pagecontent = array(
-                'username' => $session_data['username'], 
-                'logid' => $session_data['id'],
-                'roles' => $session_data['roles'],
-            );
+            $_method = $this->router->fetch_method();  
             $data = array(
                 'title' => 'Manage Admin',
                 'subtitle' => '',
                 'body_content' => 'shopadmin/manageadmin.php', 
-                'pagecontent' => $pagecontent,
+                'pagecontent' => $this->pageContent(),
                 'method' => $_method,
             );
             $this->load->view('admin/index',$data);

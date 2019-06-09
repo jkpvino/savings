@@ -32,15 +32,22 @@
 								<!-- Main -->
 								<li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
 								<li class="<?php if($method == 'dashboard'){?> active <?php } ?>"><a href="<?php echo base_url('admin/dashboard'); ?>"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
-
 								<li class="<?php if($method == 'manageshop' || $method == 'addshop' ||  $method == 'editshop'){?> active <?php } ?>">
-									<a href="<?php echo base_url('admin/manageadmin'); ?>"> <i class="icon-office"></i> <span> Shop Administration </span></a>
+									<a href="<?php echo base_url('admin/manageshop'); ?>"> <i class="icon-office"></i> <span> Shop Administration </span></a>
 									<ul> 
-										<li class="<?php if($method == 'addadmin'){ ?> active <?php } ?>" ><a href="<?php echo base_url('admin/addadmin'); ?>"> <i class="icon-add"></i> <span> New Shop </span> </a></li>	
-										<li class="<?php if($method == 'manageadmin'){ ?> active <?php } ?>" ><a href="<?php echo base_url('admin/manageadmin'); ?>"> <i class="icon-list"></i> <span> Manage Shops </span></a></li>	
+										<li class="<?php if($method == 'addshop'){ ?> active <?php } ?>" ><a href="<?php echo base_url('admin/addshop'); ?>"> <i class="icon-add"></i> <span> New Shop </span> </a></li>	
+										<li class="<?php if($method == 'manageshop'){ ?> active <?php } ?>" ><a href="<?php echo base_url('admin/manageshop'); ?>"> <i class="icon-list"></i> <span> Manage Shops </span></a></li>	
 									</ul>
 								</li>
-
+								<?php if ($pagecontent['roles'] == 10) { ?> 
+								<li class="<?php if($method == 'manageshop' || $method == 'addshop' ||  $method == 'editshop'){?> active <?php } ?>">
+									<a href="<?php echo base_url('admin/manageadmin'); ?>"> <i class="icon-office"></i> <span>  Administration Users </span></a>
+									<ul> 
+										<li class="<?php if($method == 'addadmin'){ ?> active <?php } ?>" ><a href="<?php echo base_url('admin/addadmin'); ?>"> <i class="icon-add"></i> <span> New Admin </span> </a></li>	
+										<li class="<?php if($method == 'manageadmin'){ ?> active <?php } ?>" ><a href="<?php echo base_url('admin/manageadmin'); ?>"> <i class="icon-list"></i> <span> Manage Admin </span></a></li>	
+									</ul>
+								</li>
+								<?php } ?>
 							</ul>
 						</div>
 					</div>

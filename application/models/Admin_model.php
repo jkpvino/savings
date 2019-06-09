@@ -188,6 +188,12 @@ class Admin_model extends CI_Model {
                 $row[4] = '<span class="label label-danger"> InActive </span>';
 
 
+            if($row[3] == 1)
+                $row[3] = '<span class="label label-success"> Super Admin </span>';
+            else
+                $row[3] = '<span class="label label-danger"> Branch Admin </span>';
+
+
             $e_href=""; $d_href="";
             $row[6] = '<ul class="icons-list">
                             <li class="dropdown">
