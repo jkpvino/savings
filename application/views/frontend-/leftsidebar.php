@@ -20,13 +20,13 @@
         <!-- menu links -->
         <div class="menu-bar">
          <ul class="menu-links">
-           <li><a href="javascript:void(0)">Home </a> </li>
-           <li><a href="javascript:void(0)"> Aboutus </a> </li>
-           <li><a href="javascript:void(0)"> Schemes </a> </li>
+           <li><a href="#home">Home </a> </li>
+           <li><a href="#about-us"> Aboutus </a> </li>
+           <li><a href="#schemes"> Schemes </a> </li>
            <li><a href="javascript:void(0)"> Contactus </a> </li>
            <li><a href="javascript:void(0)"> Policies </a> </li>
            <li><a href="javascript:void(0)"> Gold & Silver Rates </a> </li>
-           <li><a href="javascript:void(0)"> Login / Register </a> </li>
+           <li><a href="#login"> Login / Register </a> </li>
            <!-- <li><a href="javascript:void(0)"> Login / Register <i class="fa fa-angle-down fa-indicator"></i></a>               
               <ul class="drop-down-multilevel">
                 <li><a href="about-01.html">About 01</a></li>

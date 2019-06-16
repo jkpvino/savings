@@ -4,7 +4,7 @@
 <meta name="description" content="Webster - Responsive Multi-purpose HTML5 Template" />
 <meta name="author" content="potenzaglobalsolutions.com" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>Webster - Responsive Multi-purpose HTML5 Template</title>
+<title>Bluefills - HTML5 Template</title>
 
 <!-- Favicon -->
 <link rel="shortcut icon" href="images/favicon.ico" />
@@ -14,6 +14,14 @@
  
 <!-- Plugins -->
 <link rel="stylesheet" type="text/css" href="css/plugins-css.css" />
+
+
+<!-- revoluation -->
+<!-- <link rel="stylesheet" type="text/css" href="revolution/css/settings.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="revolution/css/revolution.addon.particles.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="revolution/css/rev-slider-arrow.css" media="screen" />
+ -->
+
 
 <!-- Typography -->
 <link rel="stylesheet" type="text/css" href="css/typography.css" />
