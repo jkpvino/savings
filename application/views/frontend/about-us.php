@@ -27,7 +27,7 @@
       <div class="col-xl-6 xs-mt-30 xs-mb-30">
           <div class="owl-carousel" data-nav-arrow="true" data-items="1" data-md-items="1" data-sm-items="1" data-xs-items="1" data-xx-items="1">
             <?php for ($i=0; $i < 2 ; $i++) { ?> 
-              <div class="item"> <img class="img-fluid full-width" src="images/about/01.jpg" alt=""> </div>
+              <div class="item"> <img class="img-fluid full-width" src="<?php echo base_url() ?>assests/frontend/images/about/01.jpg" alt=""> </div>
             <?php } ?>
          </div>
       </div>

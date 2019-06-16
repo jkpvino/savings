@@ -1,12 +1,14 @@
 
-<div class="menu-responsive"><a href="#"> <b>Webster</b></a> <a class="but" href="#"><span class="ti-menu"></span> </a></div>
+<section id="homesection"></section>
+ 
+<div class="menu-responsive"><a href="#"> <b>Bluefills</b></a> <a class="but" href="#"><span class="ti-menu"></span> </a></div>
 
 <header id="left-header" class="header vertical-menu">
  
 <!--=================================
  mega menu -->
-<div class="menu_wrapper"> </div>
-<div class="menu">  
+
+<div id="onepagenav" class="menu">  
   <!-- menu start -->
    <nav id="menu" class="mega-menu" data-pos='vertical-left'>
     <!-- menu list items container -->
@@ -14,32 +16,29 @@
         <!-- menu logo -->
         <ul class="menu-logo">
             <li>
-                <a href="index-01.html"><img id="logo_img" src="images/logo.png" alt="logo"> </a>
+                <a href="index-01.html"><img id="logo_img" src="<?php echo base_url() ?>assests/frontend/images/logo.png" alt=""> </a>
             </li>
         </ul>
         <!-- menu links -->
         <div class="menu-bar">
          <ul class="menu-links">
-           <li><a href="#home">Home </a> </li>
-           <li><a href="#about-us"> Aboutus </a> </li>
-           <li><a href="#schemes"> Schemes </a> </li>
-           <li><a href="javascript:void(0)"> Contactus </a> </li>
-           <li><a href="javascript:void(0)"> Policies </a> </li>
-           <li><a href="javascript:void(0)"> Gold & Silver Rates </a> </li>
-           <li><a href="#login"> Login / Register </a> </li>
-           <!-- <li><a href="javascript:void(0)"> Login / Register <i class="fa fa-angle-down fa-indicator"></i></a>               
-              <ul class="drop-down-multilevel">
-                <li><a href="about-01.html">About 01</a></li>
-                <li><a href="about-02.html">About 02</a></li>
-              </ul>              
-           </li> -->
+          <?php if (isUserLogged()) { ?>
+            
+            <li class="active"><a href="#top">Home</a></li>
+            <li><a href="#about-us">About us</a></li>
+            <li><a href="#portfolio">Schemes</a></li>
+            <li><a href="#contact-us">Contact us</a></li>
+            <li><a href="http://bluefills.com/index.php/index/login">Login / Register</a></li>
+            <li><a href="#login">Login / Register</a></li>
+          <?php }else{ ?>             
+            <li><a href="<?php echo base_url().'index/myaccount' ?>">Myaccount</a></li>
+          <?php } ?>
         </ul>
      </div>
     </section>
    </nav>
   <!-- menu end -->
  </div>
-
 <div class="menu-widgets text-white"> 
   <div class="social-icons social-border rounded color-hover text-center">
     <ul>

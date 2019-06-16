@@ -1,6 +1,6 @@
  
- <!--counter--><div class="testimonial-avatar"> <img alt="" src="images/team/02.jpg"> </div>
-  <section id="services" class="page-section-ptb bg-overlay-black-90 parallax" style="background: url(images/bg/06.jpg);">
+ <!--counter-->
+  <section id="services" class="page-section-ptb bg-overlay-black-90 parallax" style="background: url(<?php echo base_url() ?>assests/frontend/images/bg/06.jpg);">
    <div class="container">
   <div class="row">
        <div class="col-lg-3 col-sm-6 sm-mb-30">       

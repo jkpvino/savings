@@ -1,14 +1,8 @@
-
-<section id="homesection"></section>
- 
-<div class="menu-responsive"><a href="#"> <b>Webster</b></a> <a class="but" href="#"><span class="ti-menu"></span> </a></div>
-
+<!-- header -->
+<div class="menu-responsive"><a href="#"> <b>Bluefills</b></a> <a class="but" href="#"><span class="ti-menu"></span> </a></div>
 <header id="left-header" class="header vertical-menu">
- 
-<!--=================================
- mega menu -->
-
-<div id="onepagenav" class="menu">  
+<!-- mega menu -->
+<div class="menu">  
   <!-- menu start -->
    <nav id="menu" class="mega-menu" data-pos='vertical-left'>
     <!-- menu list items container -->
@@ -16,19 +10,17 @@
         <!-- menu logo -->
         <ul class="menu-logo">
             <li>
-                <a href="index-01.html"><img id="logo_img" src="images/logo.png" alt=""> </a>
+                <a href="<?php echo base_url() ?>"> <img id="logo_img" src="<?php echo base_url() ?>assests/frontend/images/logo.png" alt=""> </a>
             </li>
         </ul>
         <!-- menu links -->
         <div class="menu-bar">
          <ul class="menu-links">
-           <li class="active"><a href="#homesection">Home</a></li>
-            <li><a href="#about-us">About us</a></li>
-            <li><a href="#services">Rates</a></li>
-            <li><a href="#portfolio">Schemes</a></li>
-            <li><a href="#contact-us">Contact us</a></li>
-            <li><a href="javascript:void()">Policies</a></li>
-            <li><a href="#login">Login / Register</a></li>
+            <li> <a href="<?php echo base_url() ?>"> Home </a> </li>
+            <li> <a href="<?php echo base_url().'index/aboutus' ?>"> About Us </a> </li>
+            <li><a href="<?php echo base_url().'index/schemes' ?>">Schemes</a></li>
+            <li><a href="<?php echo base_url().'index/contactus' ?>">Contact us</a></li>
+            <li><a href="<?php echo base_url().'index/login' ?>">Login / Register</a></li>
         </ul>
      </div>
     </section>
@@ -46,5 +38,5 @@
     </ul>
   </div>
 </div>
-
 </header>
+<!-- header -->

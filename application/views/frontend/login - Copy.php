@@ -2,7 +2,7 @@
 <!--=================================
  login-->
 
-<section id="login" class="page-section-ptb bg-overlay-white-70 login-signup parallax home-page-banner" style="background: url(images/login/07.jpg);">>
+<section id="login" class="page-section-ptb bg-overlay-white-70 login-signup parallax home-page-banner" style="background: url(<?php echo base_url() ?>assests/frontend/images/login/07.jpg);">>
   <div class="container">
      <div class="row justify-content-center">
        <div class="col-lg-6 col-md-8">

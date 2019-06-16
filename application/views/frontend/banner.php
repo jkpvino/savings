@@ -1,5 +1,5 @@
 <!-- 
-<section class="slider-parallax popup-video-banner bg-overlay-black-50 parallax" style="background: url(images/bg/03.jpg);">
+<section class="slider-parallax popup-video-banner bg-overlay-black-50 parallax" style="background: url(<?php echo base_url() ?>assests/frontend/images/bg/03.jpg);">
   <div class="slider-content-middle">
   <div class="container">
      <div class="row">
@@ -22,7 +22,7 @@
   <?php for ($i=0; $i < 5 ; $i++) { ?>    
     <!-- ITEM -->
     <div class="item popup-video-banner">
-        <div class="row"> <img class="" src="images/bg/03.jpg" alt=""> </div>
+        <div class="row"> <img class="" src="<?php echo base_url() ?>assests/frontend/images/bg/03.jpg" alt=""> </div>
         <div class="content " style="position: absolute; top: 10%"> 
           <div class="col-lg-12 col-md-12">
             <div class="slider-content text-left">
